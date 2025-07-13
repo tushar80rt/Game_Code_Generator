@@ -1,0 +1,6 @@
+camel-ai
+mistralai
+streamlit
+python-dotenv
+selenium 
+duckduckgo-search
