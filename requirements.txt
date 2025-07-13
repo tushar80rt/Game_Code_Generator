@@ -1,6 +1,4 @@
 camel-ai
-mistralai
+Groq
 streamlit
 python-dotenv
-selenium 
-duckduckgo-search
