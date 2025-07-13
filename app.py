@@ -4,10 +4,10 @@ from agents.career_recommender import recommend_careers
 from agents.roadmap_generator import generate_roadmap
 from dotenv import load_dotenv
 
-# Load environment variables
+
 load_dotenv("api.env")
 
-# Set page config with dark theme
+
 st.set_page_config(
     page_title="🎯 CareerGPT Pro", 
     page_icon="🚀", 
@@ -15,7 +15,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS for professional dark theme
+
 st.markdown("""
     <style>
         :root {
@@ -111,7 +111,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Sidebar content
+
 with st.sidebar:
     st.markdown("""
     <div style='margin-top: -20px; margin-bottom: 30px;'>
@@ -151,16 +151,15 @@ with st.sidebar:
     </p>
     """, unsafe_allow_html=True)
 
-# Main content
+
 col1, col2 = st.columns([1, 3])
 with col1:
-    # st.image("https://via.placeholder.com/200/6f42c1/ffffff?text=🚀", width=150)
+    
  with col2:
     st.title("⚡SuccessTrack GPT")
 
 st.markdown("---")
 
-# User input section
 st.markdown("Tell Us About Yourself")
 user_input = st.text_area(
     "",
@@ -169,7 +168,6 @@ user_input = st.text_area(
     help="Be as detailed as possible for better recommendations"
 )
 
-# Action button
 col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
     analyze_btn = st.button(
@@ -184,12 +182,10 @@ if analyze_btn:
     else:
         with st.spinner("🔍 Our AI agents are analyzing your profile..."):
             try:
-                # Create progress container
                 progress_container = st.container()
                 progress_bar = progress_container.progress(0)
                 status_text = progress_container.empty()
                 
-                # Step 1: Map Interests
                 progress_bar.progress(25)
                 status_text.markdown("#### 🔮 Identifying your key interests and skills...")
                 interests = map_interests(user_input)
@@ -202,7 +198,6 @@ if analyze_btn:
                     </div>
                     """, unsafe_allow_html=True)
                 
-                # Step 2: Recommend Careers
                 progress_bar.progress(50)
                 status_text.markdown("#### 💼 Finding best career matches for you...")
                 careers = recommend_careers(interests)
@@ -215,7 +210,6 @@ if analyze_btn:
                     </div>
                     """, unsafe_allow_html=True)
                 
-                # Step 3: Generate Roadmap
                 progress_bar.progress(75)
                 status_text.markdown("#### 🛣 Building your personalized roadmap...")
                 roadmap = generate_roadmap(careers)
@@ -231,7 +225,6 @@ if analyze_btn:
                 progress_bar.progress(100)
                 status_text.empty()
                 
-                # Success message
                 st.success("""
                 ### 🎉 Analysis Complete!
                 You can now:
@@ -248,11 +241,10 @@ if analyze_btn:
                 Please try again later or contact support.
                 """)
 
-# Footer
 st.markdown("---")
 st.markdown("""
 <div style='text-align: center; color: var(--text-secondary); padding: 20px;'>
-    <p>© 2023 CareerGPT Pro | AI Career Assistant</p>
+    <p>© 2025 CareerGPT Pro | AI Career Assistant</p>
     <div style='display: flex; justify-content: center; gap: 15px; margin-top: 10px;'>
         <a href='#' style='color: var(--secondary); text-decoration: none;'>Terms</a>
         <a href='#' style='color: var(--secondary); text-decoration: none;'>Privacy</a>
