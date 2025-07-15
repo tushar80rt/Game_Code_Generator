@@ -9,8 +9,7 @@ load_dotenv("api.env")
 
 
 st.set_page_config(
-    page_title="🎯 CareerGPT Pro", 
-    page_icon="🚀", 
+    page_title="www.SuccessTrackGPT.com",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -226,9 +225,7 @@ if analyze_btn:
                 status_text.empty()
                 
                 st.success("""
-                ### 🎉 Analysis Complete!
-                You can now:
-                - Explore detailed roadmaps
+                Analysis Complete!
                 """)
                 
             except Exception as e:
