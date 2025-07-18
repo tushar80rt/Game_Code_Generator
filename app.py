@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv("api.env")
 
 st.set_page_config(
-    page_title="www.SuccessTrackGPT.com", 
+    page_title="www.game.com", 
     layout="wide",
     initial_sidebar_state="expanded"
 )
