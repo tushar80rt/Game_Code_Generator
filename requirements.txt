@@ -1,4 +1,5 @@
 camel-ai
-Groq
+OpenAI
 streamlit
 python-dotenv
+pygame
