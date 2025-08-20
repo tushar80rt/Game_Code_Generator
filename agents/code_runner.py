@@ -34,7 +34,3 @@ def run_game(file_name="game.py"):
     response = agent.step(user_msg)
     return response.msg.content
 
-if __name__ == "__main__":
-    file_name = input("▶ Enter game file name to run (default: game.py): ") or "game.py"
-    print("▶ Running Generated Game with AI...")
-    print(run_game(file_name))
